@@ -1,0 +1,168 @@
+/* ==========================================================================
+   Logistica Inversa - layout con menu lateral oscuro y acento naranja
+   ========================================================================== */
+:root {
+    --li-oscuro: #0f141c;
+    --li-oscuro-2: #1a212c;
+    --li-texto-menu: #b9c0cc;
+    --li-naranja: #ff5a0a;
+    --li-naranja-hover: #e64d00;
+    --li-fondo: #f3f4f6;
+    --li-borde: #e3e6ea;
+    --li-sidebar: 235px;
+    --bs-body-font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --bs-body-color: #2b2f36;
+}
+
+body { background: var(--li-fondo); font-family: var(--bs-body-font-family); }
+
+/* ---------- Menu lateral ---------- */
+.sidebar {
+    position: fixed; inset: 0 auto 0 0; width: var(--li-sidebar); z-index: 1040;
+    background: var(--li-oscuro); color: var(--li-texto-menu);
+    overflow-y: auto; padding-bottom: 1.5rem; transition: transform .25s ease;
+}
+.brand {
+    display: flex; align-items: center; justify-content: center; gap: .6rem;
+    padding: 1.6rem 1rem 1.4rem; text-decoration: none;
+}
+.brand-icon {
+    display: grid; place-items: center; width: 44px; height: 44px; border-radius: 10px;
+    border: 2px solid var(--li-naranja); color: var(--li-naranja); font-size: 1.3rem;
+}
+.brand-text { color: var(--li-naranja); font-weight: 800; font-size: 1.45rem; line-height: 1; }
+.brand-text small { display: block; color: var(--li-texto-menu); font-size: .72rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; margin-top: .25rem; }
+
+.menu { padding: 0 .1rem; }
+.menu-grupo {
+    display: flex; align-items: center; gap: .75rem; margin: .5rem 0 .35rem;
+    padding: .7rem 1rem; border-radius: .5rem; text-decoration: none; font-weight: 700;
+    background: var(--li-naranja); color: #fff;
+}
+.menu-grupo:hover { background: var(--li-naranja-hover); color: #fff; }
+.menu-grupo.collapsed { background: transparent; color: var(--li-texto-menu); }
+.menu-grupo.collapsed:hover { background: var(--li-oscuro-2); color: #fff; }
+.menu-chevron { margin-left: auto; font-size: .75rem; transition: transform .2s; }
+.menu-grupo.collapsed .menu-chevron { transform: rotate(90deg); }
+.menu-item {
+    display: flex; align-items: center; gap: .85rem; padding: .6rem 1.25rem;
+    color: var(--li-texto-menu); text-decoration: none; font-weight: 600; font-size: .92rem; border-radius: .4rem;
+}
+.menu-item i { color: #5f6773; }
+.menu-item:hover { color: #fff; background: var(--li-oscuro-2); }
+.menu-item.active { color: #fff; background: var(--li-oscuro-2); box-shadow: inset 3px 0 0 var(--li-naranja); }
+.menu-item.active i { color: var(--li-naranja); }
+
+/* ---------- Barra superior y contenido ---------- */
+.main { margin-left: var(--li-sidebar); min-width: 0; min-height: 100vh; transition: margin-left .25s ease; }
+.topbar {
+    position: sticky; top: 0; z-index: 1030; display: flex; align-items: center; gap: 1rem;
+    height: 50px; padding: 0 1.25rem; background: var(--li-oscuro); color: #fff;
+}
+.topbar-toggle { background: none; border: 0; color: #cfd4dc; font-size: 1.25rem; padding: .25rem .4rem; }
+.topbar-toggle:hover { color: #fff; }
+.topbar-titulo { font-weight: 700; }
+.topbar-fecha {
+    margin-left: auto; font-size: .85rem; font-weight: 700; padding: .35rem .8rem;
+    border-radius: .4rem; background: var(--li-oscuro-2);
+}
+.content { padding: 2.25rem 1.25rem; }
+
+body.sidebar-oculto .sidebar { transform: translateX(-100%); }
+body.sidebar-oculto .main { margin-left: 0; }
+.sidebar-backdrop { display: none; }
+
+@media (max-width: 991.98px) {
+    .sidebar { transform: translateX(-100%); }
+    .main { margin-left: 0; }
+    body.sidebar-visible .sidebar { transform: none; }
+    body.sidebar-visible .sidebar-backdrop { display: block; position: fixed; inset: 0; z-index: 1035; background: rgba(0, 0, 0, .45); }
+    .content { padding: 1.25rem 1rem; }
+}
+
+/* ---------- Tarjetas ---------- */
+.panel { background: #fff; border-radius: .75rem; padding: 1.4rem 1.25rem; box-shadow: 0 1px 3px rgba(16, 24, 40, .06); }
+.panel-titulo { font-size: 1rem; font-weight: 700; margin-bottom: 1.1rem; }
+.panel-titulo i { color: var(--li-naranja); margin-right: .4rem; }
+.filtro-label { display: block; font-size: .85rem; font-weight: 700; margin-bottom: .4rem; color: #444a53; }
+.filtro-label i { color: var(--li-naranja); margin-right: .3rem; }
+.form-control, .form-select { border-color: #d5d9df; }
+.form-control:focus, .form-select:focus { border-color: var(--li-naranja); box-shadow: 0 0 0 .2rem rgba(255, 90, 10, .15); }
+
+.btn-naranja { background: var(--li-naranja); border-color: var(--li-naranja); color: #fff; font-weight: 700; }
+.btn-naranja:hover, .btn-naranja:focus { background: var(--li-naranja-hover); border-color: var(--li-naranja-hover); color: #fff; }
+.btn-naranja:disabled { background: #ffae85; border-color: #ffae85; color: #fff; }
+.btn i { margin-right: .3rem; }
+.btn-acciones { border-radius: 2rem; padding: .15rem .8rem; font-size: .9rem; }
+
+/* ---------- Tablas con filas como tarjetas ---------- */
+/* Selectores con .table > ... para ganarle a los estilos de Bootstrap y DataTables */
+.tabla-cards { overflow-x: auto; }
+.tabla-cards .table { border-collapse: separate !important; border-spacing: 0 .55rem !important; margin-top: -.55rem; --bs-table-bg: transparent; }
+.tabla-cards .table > :not(caption) > * > * { border: 0 !important; box-shadow: none; }
+.tabla-cards .table > thead > tr > th { font-weight: 700; font-size: .9rem; color: #3b4048; white-space: nowrap; padding: .4rem .75rem; background: transparent; }
+.tabla-cards .table > tbody > tr > td,
+.tabla-cards .table > tfoot > tr > td { background: #fff; padding: 1.1rem .75rem; }
+.tabla-cards .table > tbody > tr > td:first-child,
+.tabla-cards .table > tfoot > tr > td:first-child { border-radius: .5rem 0 0 .5rem; padding-left: 1rem; }
+.tabla-cards .table > tbody > tr > td:last-child,
+.tabla-cards .table > tfoot > tr > td:last-child { border-radius: 0 .5rem .5rem 0; }
+.tabla-cards .table > tbody > tr > td:only-child { border-radius: .5rem; }
+.tabla-cards .table > tbody > tr:hover > td { background: #fffaf6; }
+.tabla-cards .table > tbody > tr.fila-subtotal > td { background: #f7f8fa; font-weight: 700; }
+.tabla-cards .table > tbody > tr.fila-cero > td { color: #9aa1ab; }
+.tabla-cards .table > tfoot > tr > td { background: var(--li-oscuro); color: #fff; font-weight: 800; }
+.tabla-cards-sm .table > tbody > tr > td { padding: .65rem .6rem; background: var(--li-fondo); }
+/* DataTables: "Mostrar N registros" y "Buscar" como en el resto del sistema */
+div.dt-container .dt-length select { width: auto; display: inline-block; margin: 0 .35rem; }
+div.dt-container .dt-search input { border-radius: 2rem; min-width: 200px; margin-left: .5rem; }
+.dt-container .dt-layout-table { overflow-x: auto; }
+div.dt-container .dt-paging .page-item.active .page-link { background: var(--li-naranja); border-color: var(--li-naranja); }
+div.dt-container .dt-paging .page-link { color: #3b4048; }
+
+.barra-pct { display: flex; align-items: center; gap: .5rem; min-width: 150px; }
+.barra-pct .progress { flex: 1; height: 6px; }
+.barra-pct .progress-bar { background: var(--li-naranja); }
+
+/* KPIs del reporte */
+.kpis { display: flex; flex-wrap: wrap; gap: .75rem; }
+.kpi { background: #fff; border-radius: .6rem; padding: .6rem 1rem; box-shadow: 0 1px 2px rgba(16, 24, 40, .05); }
+.kpi strong { display: block; font-size: 1.35rem; line-height: 1.1; }
+.kpi small { color: #6b7280; font-weight: 700; }
+
+/* ---------- Armado de pallet ---------- */
+.pallet-numero { font-size: 2rem; font-weight: 800; line-height: 1.1; }
+.contador { min-width: 110px; padding: .45rem .8rem; border-radius: .6rem; text-align: center; background: #fff1e8; color: var(--li-naranja-hover); }
+.contador-num { font-size: 1.9rem; font-weight: 800; line-height: 1.1; }
+.contador-lleno { background: #fff3cd; color: #997404; }
+.contador-excedido { background: #f8d7da; color: #b02a37; }
+#barra.bg-primary { background: var(--li-naranja) !important; }
+
+.feedback { min-height: 2.6rem; padding: .55rem .8rem; border-radius: .45rem; font-weight: 700; }
+.feedback-info { background: #eef0f3; color: #4b5563; }
+.feedback-ok { background: #d1e7dd; color: #0f5132; }
+.feedback-error { background: #f8d7da; color: #842029; }
+
+#codigo_barras { font-family: var(--bs-font-monospace); font-size: 1.5rem; }
+
+/* Loader de las llamadas AJAX ($("#loader") en beforeSend / complete) */
+#loader { position: fixed; inset: 0; z-index: 2000; background: rgba(15, 20, 28, .35); }
+#loader .spinner-border { position: absolute; top: 50%; left: 50%; width: 3rem; height: 3rem; margin: -1.5rem 0 0 -1.5rem; }
+
+/* alertify sobre el tema bootstrap con la fuente del sistema */
+.alertify .ajs-dialog, .alertify-notifier .ajs-message { font-family: var(--bs-body-font-family); }
+
+/* Modal del limite de cajas: ancho para los tres botones en una linea */
+@media (min-width: 576px) { .modal-limite { max-width: 600px; } }
+
+/* Fotografias del pallet: 2 espacios con miniatura 4:3 (borde punteado mientras falta la foto) */
+.foto-slot-img {
+    position: relative; aspect-ratio: 4 / 3; border-radius: .5rem; overflow: hidden;
+    border: 2px dashed #cfd4dc; background: var(--li-fondo);
+    display: flex; align-items: center; justify-content: center;
+}
+.foto-slot-ok .foto-slot-img { border: 2px solid #198754; }
+.foto-slot-img img { width: 100%; height: 100%; object-fit: cover; }
+.foto-slot-vacio { display: flex; flex-direction: column; align-items: center; gap: .35rem; color: #8a929c; font-weight: 700; font-size: .85rem; }
+.foto-slot-vacio i { font-size: 1.6rem; color: var(--li-naranja); }
+.foto-slot-vacio.d-none { display: none !important; }

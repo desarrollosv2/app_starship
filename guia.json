@@ -1,0 +1,41 @@
+{
+	"recolecta_fecha": "2024-10-21 23:01:01",
+	"recolecta_comentario": "MailAmericas StarShip",
+	"tipo_entrega": "NRML",
+	"Facturacion": {
+		"nit": "16015924",
+		"nombre": "Marena Milian",
+		"correo": "desarrollosv@c807.com",
+		"direccion": "5ta Calle 3-80 Zona 1  "
+	},
+	"guias": [
+		{
+			"identificacion": "100",
+			"nombre": "Marena Milian",
+			"correo": "desarrollosv@c807.com",
+			"telefono": "40231042",
+			"direccion": "5ta Calle 3-80 Zona 1  ",
+			"tipo_servicio": "CCE",
+			"monto_cce": "2.4700",
+			"agencia_destino": "0",
+			"con_seguro": "0",
+			"con_liquidacion_documento": "0",
+			"departamento_id": "16",
+			"municipio_id": "578",
+			"detalle": [
+				{
+					"codigo": null,
+					"peso": "0.54",
+					"contenido": "Lampara de mano",
+					"unidad_medida": "LB",
+					"cobro": [
+						{ "codigo": "IVA", "monto": "0.10" },
+						{ "codigo": "DAI", "monto": "0.00" },
+						{ "codigo": "FLETE", "monto": "0.00" },
+						{ "codigo": "DOCS", "monto": "2.4700" }
+					]
+				}
+			]
+		}
+	]
+}

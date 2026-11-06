@@ -1,0 +1,359 @@
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s;
+    margin: 10px;
+}
+
+
+.btn-gradient {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-neumorphic {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 7px 7px 15px #bebebe, -7px -7px 15px #ffffff;
+    font-size: 16px;
+    transition: transform 0.2s;
+}
+
+.btn-neumorphic:hover {
+    transform: scale(1.05);
+}
+
+.btn-double-border {
+    background-color: transparent;
+    color: #007bff;
+    padding: 10px 20px;
+    border: 2px solid #007bff;
+    border-radius: 30px;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s;
+}
+
+.btn-double-border:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-color: #007bff;
+    z-index: -1;
+    transition: transform 0.3s;
+    transform: translateX(-100%) translateY(-50%) rotate(45deg);
+}
+
+.btn-double-border:hover {
+    color: white;
+}
+
+.btn-double-border:hover:before {
+    transform: translateX(0) translateY(-50%) rotate(45deg);
+}
+
+.btn-minimalist {
+    background-color: transparent;
+    color: #333;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-minimalist:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.btn-rounded {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-rounded:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-shadow {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.btn-shadow:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-float {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: transform 0.3s;
+}
+
+.btn-float:hover {
+    transform: translateY(-5px);
+}
+
+.btn-glass {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-glass:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #000;
+}
+
+.btn-fill-animation {
+    background-color: transparent;
+    color: #e74c3c;
+    padding: 10px 20px;
+    border: 2px solid #e74c3c;
+    border-radius: 30px;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s;
+}
+
+.btn-fill-animation:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #e74c3c;
+    z-index: -1;
+    transition: height 0.3s;
+}
+
+.btn-fill-animation:hover {
+    color: white;
+}
+
+.btn-fill-animation:hover:before {
+    height: 100%;
+}
+
+.btn-glow {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: box-shadow 0.3s;
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 10px #3498db, 0 0 20px #3498db, 0 0 30px #3498db;
+}
+
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-icon i {
+    font-size: 18px;
+}
+
+.btn-gradient-icon {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+}
+
+.btn-gradient-icon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-neumorphic-icon {
+    background-color: #e0e0e0;
+    box-shadow: 7px 7px 15px #bebebe, -7px -7px 15px #ffffff;
+}
+
+.btn-neumorphic-icon:hover {
+    transform: scale(1.05);
+}
+
+.btn-double-border-icon {
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-double-border-icon:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-color: #007bff;
+    z-index: -1;
+    transition: transform 0.3s;
+    transform: translateX(-100%) translateY(-50%) rotate(45deg);
+}
+
+.btn-double-border-icon:hover {
+    color: white;
+}
+
+.btn-double-border-icon:hover:before {
+    transform: translateX(0) translateY(-50%) rotate(45deg);
+}
+
+.btn-minimalist-icon {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.btn-minimalist-icon:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.btn-rounded-icon {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-rounded-icon:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-shadow-icon {
+    background-color: #ff6f61;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-shadow-icon:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-float-icon {
+    background-color: #f39c12;
+    color: white;
+}
+
+.btn-float-icon:hover {
+    transform: translateY(-5px);
+}
+
+.btn-glass-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.btn-glass-icon:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #000;
+}
+
+.btn-fill-animation-icon {
+    background-color: transparent;
+    color: #e74c3c;
+    border: 2px solid #e74c3c;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-fill-animation-icon:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #e74c3c;
+    z-index: -1;
+    transition: height 0.3s;
+}
+
+.btn-fill-animation-icon:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-fill-animation-icon:hover:before {
+    height: 100%;
+}
+
+.btn-glow-icon {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-glow-icon:hover {
+    box-shadow: 0 0 10px #3498db, 0 0 20px #3498db, 0 0 30px #3498db;
+}
+
+/** Otros controles **/
+       
+.radius-date {
+   height: 46px !important;
+	border-radius: 50px !important ;
+	border: 1px solid #ddd !important ;
+}
+

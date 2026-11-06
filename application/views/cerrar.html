@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+@font-face {
+  font-family: 'Filson Pro';
+  src: url('path/to/FilsonPro-Regular.ttf'); /* Asegúrate de especificar la ruta correcta */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.alert-box {
+  background-color: #FE4F00;
+  width: 600px; /* Duplicado de tamaño */
+  padding: 40px; /* Ajustado para mayor espacio */
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: white;
+  font-family: 'Filson Pro', sans-serif;
+}
+
+.alert-icon {
+  font-size: 60px; /* Duplicado de tamaño */
+  color: #FE4F00;
+  
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.alert-box h2 {
+  font: normal normal bold 22px/21px 'Filson Pro', sans-serif;
+  color: #E8E8E8;
+  letter-spacing: 0px;
+  opacity: 1;
+  margin: 10px 0;
+}
+
+.alert-box p {
+  font: normal normal bold 22px/21px 'Filson Pro', sans-serif;
+  color: #E8E8E8;
+  letter-spacing: 0px;
+  opacity: 1;
+  margin-bottom: 30px;
+}
+
+.alert-box button {
+  background-color: #E8E8E8;
+  color: #FE4F00; /* Color de fondo del formulario */
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+}
+
+.alert-box button:hover {
+  background-color: #E8E8E8;
+}
+
+    </style>
+</head>
+<body>
+    <div class="alert-box">
+        
+        <div class="alert-icon">⚠️</div>
+       
+        <p>Credenciales incorrectas.</p>
+        <button onclick="redirectToApp()">Cerrar</button>
+      </div>
+      
+      
+<script>
+    function closeAlert() {
+  document.querySelector('.alert-box').style.display = 'none';
+ 
+}
+
+function redirectToApp() {
+
+  window.location.href = "https://stargateserp.com/app_starship/";
+}
+
+
+</script>
+    </body>
+</html>
+

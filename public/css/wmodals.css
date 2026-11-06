@@ -1,0 +1,37 @@
+.modal-header {
+    padding: 9px 15px;
+    border-bottom: 1px solid #eee;
+    background-color: #0480be;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.modal-header {
+    background: #ef7f1b;
+    background-color: #F15a29;
+    background-color: white;
+    color: #6C757D;
+    color: #F15A29
+}
+
+.modal-content {
+    overflow: hidden;
+}
+
+.btnbuscar {
+    background-color: #ef7f1b !important;
+    color: #fff !important;
+}
+
+div.centerTable {
+    text-align: center;
+}
+
+div.centerTable table {
+    margin: 0 auto;
+    text-align: left;
+}

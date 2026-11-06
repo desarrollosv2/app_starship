@@ -1,0 +1,9 @@
+<select name="estatuschk" id="estatuschk" class="form-control chosen">
+
+    <?php foreach ($estatus as $row): ?>
+
+        <option value="<?php echo $row->id_estatus; ?>"><?php echo $row->nombre; ?></option>
+
+    <?php endforeach ?>
+
+</select>

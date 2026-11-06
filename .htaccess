@@ -1,0 +1,15 @@
+RewriteEngine on
+Options -Indexes
+RewriteCond $1 !^(player|images|favicon\.ico|index\.php|robots\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [L]
+
+RewriteCond %{HTTP_USER_AGENT} ^HTTrack [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebCopier [NC]
+RewriteRule .* - [F,L]
+php_value upload_max_filesize 100M
+php_value post_max_size 100M
+php_value max_execution_time 1000
+php_value max_input_time 1000
+

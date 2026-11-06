@@ -1,0 +1,4 @@
+﻿"税单号（必填）|Transaction number (required)","提单清关所属国家（必填）|Country (required)","币种（申报金额与税费）（必填）|Currency (required)","币种（税费）（必填）|Currency (required)","服务商申报提单代缴税费总金额（必填）|Total payable amount (required)","服务商申报提单代缴关税总金额（必填）|Total Duty (required)","服务商申报提单代缴消费税金额（必填）|Total Excise Tax (required)","服务商申报提单代缴增值税金额（必填）|Total GST (required)","服务商申报提单代缴反倾销税金额（必填）|Total SIMA (required)","服务商申报包裹代缴地方消费税金额（必填）|Total Provincial tax (required)","币种（手续费）|Currency (Service Fee)","服务商申报提单手续费（必填）|Service Fee (required)","提单代缴其他费用金额（非必填）|Other Fees (optional)","服务商提单代缴其他费用增值税金额（必填）|Other Tax related to service fee (required)"
+260011116018F,Honduras,HNL,HNL,65301.8793,25668.7917,1266.9177,38366.1699,0,0,HNL,0,0,0
+260011115980M,Honduras,HNL,HNL,63874.1035,25001.1845,1159.1091,37713.8099,0,0,HNL,0,0,0
+260011115974P,Honduras,HNL,HNL,59593.6621,22528.9400,1893.7808,35170.9413,0,0,HNL,0,0,0
